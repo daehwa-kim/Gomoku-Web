@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Match</title>
+        <link rel="stylesheet" href="match.css">
+        <script src="match.js"></script>
+        <meta name="viewport" content="width=590px, user-scalable=yes">
+    </head>
+    <body>
+        <main>
+            <center><input id="chkDebug" type="checkbox" onclick="debugSwitch();"> Debug
+            <input type="button" value="Replay" onclick="resetClick();"></center><br>
+            <table id="board">
+                <script>
+                    for (var row = 0; row < 15; row++)
+                    {
+                        document.write("<tr>")
+                        for (var col = 0; col < 15; col++)
+                        {
+                            var id = row.toString() + "+" + col.toString();
+                            document.write("<td class='stone' id='" + id + "' stoneOwner='' stoneColor='0' stoneAiWeight='0' onclick='stoneClick(this)' tabindex='1' onmouseover='stoneMouseOver(this);' onmouseleave='stoneMouseLeave(this);' onfocus='stoneMouseOver(this);' onblur='stoneMouseLeave(this);'></td>");
+                        }
+                        document.write("</tr>")
+                    }
+                </script>
+            </table>
+        </main>
+
+        <div id="dialog_back" onclick="this.style.display='none';">
+            <div id="dialog">
+            </div>
+        </div>
+    </body>
+</html>

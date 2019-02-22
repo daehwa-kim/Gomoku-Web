@@ -1,0 +1,78 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+#board {
+    background-image: url("images/Board.png");
+    border-spacing: 1px;
+    padding: 14px;
+    margin: 0 auto;
+    background-size: 585px;
+
+    box-shadow: 0 6px 6px rgba(0,0,0,0.2);
+}
+
+.stone {
+    width: 36px;
+    height: 36px;
+    text-align: center;
+    vertical-align: middle;
+    outline: none;
+    background-size: 100%;
+
+    color: rgb(192, 0, 0);
+    font-size: 8pt;
+    font-famiy: "Arial";
+    font-weight: bold;
+}
+
+.stone:focus {
+
+}
+
+.stone[stoneColor="1"] {
+    background-image: url("images/ImgStoneBlack.png");
+}
+
+.stone[stoneColor="2"] {
+    background-image: url("images/ImgStoneWhite.png");
+}
+
+.stone img {
+    margin-top: 3px;
+}
+
+
+/* Misc */
+
+#dialog_back {
+    display: none;
+    background-color: rgba(0,0,0,0.3);
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    line-height: 100vh;
+    vertical-align: middle;
+    text-align: center;
+}
+
+#dialog {
+    display: inline-block;
+    background-color: white;
+    padding: 1vw;
+    width: initial;
+    height: initial;
+    line-height: initial;
+    text-align: left;
+
+    -moz-border-radius:3px;
+    -webkit-border-radius:3px;
+    border-radius:3px;
+
+    -moz-box-shadow:0px 3px 2px rgba(0,0,0,0.18);
+    -webkit-box-shadow:0px 3px 2px rgba(0,0,0,0.18);
+    box-shadow:0px 10px 15px rgba(0,0,0,0.4);
+}
